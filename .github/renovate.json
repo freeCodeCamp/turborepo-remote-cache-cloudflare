@@ -1,13 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":semanticCommitTypeAll(chore)"],
-  "dependencyDashboard": true,
+  "extends": [
+    "github>freecodecamp/renovate-config",
+    ":semanticCommitTypeAll(chore)"
+  ],
   "rangeStrategy": "bump",
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "dependencies (non-major)",
-      "automerge": true,
       "schedule": "* * * * 0,6"
     },
     {
