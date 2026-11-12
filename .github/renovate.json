@@ -8,6 +8,7 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^v?0\\./",
       "groupName": "dependencies (non-major)",
       "schedule": "* * * * 0,6"
     },
